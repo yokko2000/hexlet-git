@@ -1,0 +1,20 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Игры Разума",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yokko2000/hexlet-git.git"
+  },
+  "author": "Maksim Komiachko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yokko2000/hexlet-git/issues"
+  },
+  "homepage": "https://github.com/yokko2000/hexlet-git#readme",
+  "type": "module"
+}
