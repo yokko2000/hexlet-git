@@ -19,5 +19,8 @@
     "brain-games": "bin/brain-games.js"
   },
   "homepage": "https://github.com/yokko2000/hexlet-git#readme",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
