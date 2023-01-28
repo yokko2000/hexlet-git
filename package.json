@@ -15,12 +15,16 @@
   "bugs": {
     "url": "https://github.com/yokko2000/hexlet-git/issues"
   },
-  "bin": {
-    "brain-games": "bin/brain-games.js"
+    "bin": {
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "homepage": "https://github.com/yokko2000/hexlet-git#readme",
   "type": "module",
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0"
   }
 }
