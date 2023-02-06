@@ -1,32 +1,28 @@
 #!/usr/bin/env node
-//начало
+ //начало
 //импорт нужных функций
 import readlineSync from 'readline-sync';
-//функция генерирующая случайное число
+//функция генерирующая случайное число от 0 до 100
 const getRandomInt = () => {
     return Number(Math.floor(Math.random() * 101));
 }
-//функция поиска НОД
-function gcd_rec(a, b) {
-    if (b) {
-        return gcd_rec(b, a % b);
-    } else {
-        return Math.abs(a);
-    }
-}
+//функция проверяет простое ли число
+function isPrime(num) {
+    for (var i = 2; i < num; i++)
+  if (num % i === 0) return 'no';
+return 'yes';
+      }
 //спрашиваем как зовут пользователя
 var userName = readlineSync.question('May I have your name? ');
 //здесь идет основная логика игры
-console.log('Find the greatest common divisor of given numbers.');
+console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 let point = 0;
 //цикл на 3 раунда игры
 for (let i = 0; i < 3; i++) {
-    //здесь генерируем вопрос пользователю
-    var numberOne = getRandomInt();
-    var numberTwo = getRandomInt()
-    var question = numberOne + ' ' + numberTwo;
-    //здесь генерируем правильный ответ
-    var correctQuestion = gcd_rec(numberOne, numberTwo);
+    //генерируем случайное число
+    var question = getRandomInt();
+     //генерируем правильный ответ
+    var correctQuestion = isPrime(question);
     //здесь вывод вопроса и ввод ответа
     console.log('Question: ' + question);
     var answer = readlineSync.question('Your answer: ');
