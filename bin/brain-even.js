@@ -2,7 +2,6 @@
 //начало
 //импорт нужных функций
 import readlineSync from 'readline-sync';
-import {getUserName} from '../src/cli.js';
 //функция проверяющая четность числа
 const evenNumber = (number) => {
     if (number%2 == 0) {
