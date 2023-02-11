@@ -1,27 +1,17 @@
-#!/usr/bin/env node
-//начало
-//импорт нужных функций
 import readlineSync from 'readline-sync';
-//функция генерирующая случайное число
-const getRandomInt = () => {
-    return Number(Math.floor(Math.random() * 101));
-}
-//функция генерирующая случайный знак операции
-const getRandomOperation = () => {
-    const array = ['+', '-', '*'];
-    return array[Math.floor(Math.random() * 2)];
-}
+const gameLogic = (nameGame, question, correctQuestion) => {
 //спрашиваем как зовут пользователя
 var userName = readlineSync.question('May I have your name? ');
-//здесь идет основная логика игры
-console.log('What is the result of the expression?');
+//задаем вопрос пользователю 
+if (nameGame === 'game-calc') {
+   console.log('What is the result of the expression?');
+}
 let count = 0;
 //цикл на 3 раунда игры
 for (let i = 0; i < 3; i++) {
-    //здесь генерируем вопрос пользователю
-    var question = getRandomInt() + getRandomOperation() + getRandomInt();
+    
     //здесь генерируем правильный ответ
-    var correctQuestion = eval(question);
+    
     //здесь вывод вопроса и ввод ответа
     console.log('Question: ' + question);
     var answer = readlineSync.question('Your answer: ');
@@ -40,4 +30,5 @@ for (let i = 0; i < 3; i++) {
 if (count == 3) {
     console.log('Congratulations, ' + userName + '!')
 }
-//конец
+}
+export {gameLogic};
